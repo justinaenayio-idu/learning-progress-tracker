@@ -1,0 +1,204 @@
+/* Include padding and borders in an element's specified width. */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background-color: #f3f5f9;
+  color: #1f2937;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Main application container */
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 32px 20px;
+}
+
+/* Application heading */
+header {
+  margin-bottom: 24px;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 8px;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+h2 {
+  margin-bottom: 12px;
+  font-size: 1.25rem;
+}
+
+header p {
+  color: #64748b;
+}
+
+/* Navigation */
+nav {
+  margin-bottom: 28px;
+  padding: 14px 18px;
+  background-color: #ffffff;
+  border: 1px solid #dbe2ea;
+  border-radius: 10px;
+}
+
+a {
+  color: #1d4ed8;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: #1e3a8a;
+}
+
+nav a {
+  display: inline-block;
+  padding: 4px 8px;
+  font-weight: 600;
+}
+
+/* Page content */
+section {
+  margin-bottom: 24px;
+}
+
+/* Add-topic form */
+form {
+  margin-bottom: 24px;
+  padding: 24px;
+  background-color: #ffffff;
+  border: 1px solid #dbe2ea;
+  border-radius: 12px;
+}
+
+form > div {
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+input,
+select,
+button {
+  font: inherit;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px 12px;
+  background-color: #ffffff;
+  color: #1f2937;
+  border: 1px solid #94a3b8;
+  border-radius: 6px;
+}
+
+select {
+  margin-bottom: 16px;
+}
+
+form select {
+  margin-bottom: 0;
+}
+
+/* Buttons */
+button {
+  padding: 10px 16px;
+  background-color: #1d4ed8;
+  color: #ffffff;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  background-color: #1e40af;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Visible keyboard focus */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 3px;
+}
+
+/* Topic cards */
+article {
+  margin-bottom: 16px;
+  padding: 24px;
+  background-color: #ffffff;
+  border: 1px solid #dbe2ea;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(15, 23, 42, 0.05);
+}
+
+article button {
+  margin: 4px 8px 4px 0;
+}
+
+/* Delete action */
+.delete-button {
+  background-color: #b91c1c;
+}
+
+.delete-button:hover:not(:disabled) {
+  background-color: #991b1b;
+}
+
+/* Validation and request errors */
+[role="alert"] {
+  color: #b91c1c;
+  font-weight: 600;
+}
+
+/* Loading message */
+[role="status"] {
+  padding: 24px;
+  color: #475569;
+  text-align: center;
+}
+
+/* Smaller screens */
+@media (max-width: 600px) {
+  main {
+    padding: 20px 14px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  form,
+  article {
+    padding: 18px;
+  }
+
+  article button {
+    display: block;
+    width: 100%;
+    margin: 8px 0 0;
+  }
+}
