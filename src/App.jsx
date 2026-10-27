@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import useTopics from "./hooks/useTopics";
 import {
   BrowserRouter,
   Routes,
@@ -177,11 +178,17 @@ function TopicDetails({ topics }) {
 }
 
 export default function App() {
+
+  {/*
   const [topics, setTopics] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [fetchError, setFetchError] = useState("");
+  */}
+  const { topics, setTopics, isLoading, fetchError } = useTopics();
+
   const [statusFilter, setStatusFilter] = useState("All");
 
+  {/*
   useEffect(() => {
     const controller = new AbortController();
 
@@ -220,6 +227,7 @@ export default function App() {
       controller.abort();
     };
   }, []);
+  */}
 
   function handleToggleComplete(topicId) {
     setTopics((previousTopics) =>
